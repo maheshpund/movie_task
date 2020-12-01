@@ -123,16 +123,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-REST_FRAMEWORK = {
-    'DEFAULT_THROTTLE_CLASSES': [
-                            'rest_framework.throttling.AnonRateThrottle',
-                            'rest_framework.throttling.UserRateThrottle'
-                            ],
-    'DEFAULT_THROTTLE_RATES': {
-                            'anon': '20/min',
-                            'user': '2/min'
-                                }
-                }
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
