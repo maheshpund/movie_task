@@ -1,13 +1,17 @@
 from rest_framework import serializers
-from .models import Poster, Genre, Movie
+from .models import Poster, Genre, Movie, User
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username','password','password']
 
 
 class PosterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Poster
         fields = ['id','poster']
-
-
 
 
 class GenreSerializer(serializers.ModelSerializer):
