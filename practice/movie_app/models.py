@@ -8,11 +8,6 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-    class Meta:
-        permissions = (
-                       ("movie_app_movie", "can view movie"),
-                      )
-
 
 class Movie(models.Model):
     movie_name = models.CharField(max_length=20)
